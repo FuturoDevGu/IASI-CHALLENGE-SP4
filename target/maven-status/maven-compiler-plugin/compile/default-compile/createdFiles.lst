@@ -1,0 +1,15 @@
+com\iasi\iasi\model\Empresa.class
+com\iasi\iasi\repository\EquipamentoRepository.class
+com\iasi\iasi\IasiApplication.class
+com\iasi\iasi\repository\JdbcEquipamentoRepository.class
+com\iasi\iasi\model\Usuario.class
+com\iasi\iasi\repository\JdbcEmpresaRepository.class
+com\iasi\iasi\service\UsuarioService.class
+com\iasi\iasi\repository\ConsumoRepository.class
+com\iasi\iasi\repository\JdbcConsumoRepository.class
+com\iasi\iasi\config\SecurityConfig.class
+com\iasi\iasi\repository\UsuarioRepository.class
+com\iasi\iasi\model\Consumo.class
+com\iasi\iasi\model\Equipamento.class
+com\iasi\iasi\controller\IasiController.class
+com\iasi\iasi\repository\EmpresaRepository.class

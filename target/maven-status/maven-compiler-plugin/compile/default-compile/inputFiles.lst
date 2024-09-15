@@ -1,0 +1,15 @@
+C:\Projects\Java\IASI\src\main\java\com\iasi\iasi\controller\IasiController.java
+C:\Projects\Java\IASI\src\main\java\com\iasi\iasi\IasiApplication.java
+C:\Projects\Java\IASI\src\main\java\com\iasi\iasi\repository\ConsumoRepository.java
+C:\Projects\Java\IASI\src\main\java\com\iasi\iasi\model\Equipamento.java
+C:\Projects\Java\IASI\src\main\java\com\iasi\iasi\repository\EquipamentoRepository.java
+C:\Projects\Java\IASI\src\main\java\com\iasi\iasi\model\Usuario.java
+C:\Projects\Java\IASI\src\main\java\com\iasi\iasi\service\UsuarioService.java
+C:\Projects\Java\IASI\src\main\java\com\iasi\iasi\repository\JdbcConsumoRepository.java
+C:\Projects\Java\IASI\src\main\java\com\iasi\iasi\model\Consumo.java
+C:\Projects\Java\IASI\src\main\java\com\iasi\iasi\repository\JdbcEquipamentoRepository.java
+C:\Projects\Java\IASI\src\main\java\com\iasi\iasi\config\SecurityConfig.java
+C:\Projects\Java\IASI\src\main\java\com\iasi\iasi\repository\UsuarioRepository.java
+C:\Projects\Java\IASI\src\main\java\com\iasi\iasi\repository\EmpresaRepository.java
+C:\Projects\Java\IASI\src\main\java\com\iasi\iasi\model\Empresa.java
+C:\Projects\Java\IASI\src\main\java\com\iasi\iasi\repository\JdbcEmpresaRepository.java
