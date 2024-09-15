@@ -30,3 +30,17 @@ https://www.youtube.com/watch?v=XxAfDHpw1kw
 
 ### **Listagem de todos os endpoints**
 ![image](https://github.com/EduardoJablinski/Sprint2_IASI/assets/127799391/669618f7-6748-40a4-b10a-6fc8433633ef)
+
+Para Compilar a aplicação
+Utilizando IntelliJ acessar o menu run, clicar em edit configuration, clicar no sinal de mais para adcionar uma nova configuração, escolher Maven na lista, na caixa de texto run escrever clean install -U, dar OK, e no menu do Intellij clicar no botão verde para rodar a compilação. Assim que terminar, rodar a tela do console para ver que deu ok na compilação. 
+
+Para rodar a aplicação
+Antes de rodar o java, devera estar na mesma pasta raiz do repositório
+Pode usar externo tendo o java JRE8, usar o comando java -jar target\spring-boot-jdbctemplate-oracle-0.0.1-SNAPSHOT.jar
+
+A partir disso processo via POSTMAN
+
+
+
+
+
