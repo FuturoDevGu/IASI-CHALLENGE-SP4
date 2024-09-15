@@ -23,7 +23,7 @@ public class JdbcEmpresaRepository implements EmpresaRepository {
 
     @Override
     public int update(Empresa empresa) {
-        return jdbcTemplate.update("UPDATE TB_IASI_EMPRESA SET NOME_EMPRESA=?, SETOR_INDUSTRIAL_EMPRESA=?, LOCALIZACAO_EMPRESA=?, TIPO_EMPRESA=?, CONFORMIDADE_REGULAMENTAR=? WHERE ID=?",
+        return jdbcTemplate.update("UPDATE TB_IASI_EMPRESA SET NOME_EMPRESA=?, SETOR_INDUSTRIAL_EMPRESA=?, LOCALIZACAO_EMPRESA=?, TIPO_EMPRESA=?, CONFORMIDADE_REGULAMENTAR=? WHERE ID_EMPRESA=?",
                 new Object[] { empresa.getNome(), empresa.getSetorIndustrial(), empresa.getLocalizacao(), empresa.getTipo(), empresa.getConformidadeRegular(), empresa.getId() });
     }
 
@@ -31,7 +31,7 @@ public class JdbcEmpresaRepository implements EmpresaRepository {
     public Empresa findById(Long id) {
         try {
             return jdbcTemplate.queryForObject(
-                    "SELECT * FROM TB_IASI_EMPRESA WHERE ID=?",
+                    "SELECT * FROM TB_IASI_EMPRESA WHERE ID_EMPRESA=?",
                     new Object[]{id},
                     (rs, rowNum) -> {
                         Empresa empresa = new Empresa();
@@ -52,7 +52,7 @@ public class JdbcEmpresaRepository implements EmpresaRepository {
 
     @Override
     public int deleteById(Long id) {
-        return jdbcTemplate.update("DELETE FROM TB_IASI_EMPRESA WHERE ID=?", id);
+        return jdbcTemplate.update("DELETE FROM TB_IASI_EMPRESA WHERE ID_EMPRESA=?", id);
     }
 
     @Override
