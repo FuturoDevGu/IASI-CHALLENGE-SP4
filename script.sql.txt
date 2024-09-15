@@ -1,0 +1,69 @@
+-- Criação das Tabelas
+CREATE TABLE TB_IASI_EQUIPAMENTO (
+    id_equipamento INT IDENTITY PRIMARY KEY,
+    nome_equipamento VARCHAR(255),
+    tipo_equipamento VARCHAR(100),  --Tipo ou categoria do equipamento
+    localizacao_equipamento VARCHAR(255),
+    data_instalacao_equipamento DATE,
+    estado_equipamento VARCHAR(100)
+);
+
+
+CREATE TABLE TB_IASI_PREVISAO (
+    id_previsao INT IDENTITY PRIMARY KEY,
+    id_equipamento INTEGER REFERENCES TB_IASI_EQUIPAMENTO(id_equipamento),
+    data_previsao DATE,
+    tipo_previsao VARCHAR(100),
+    descricao_previsao VARCHAR(255), --Descrição detalhada da previsão
+    probabilidade_previsao FLOAT
+);
+
+
+CREATE TABLE TB_IASI_CONSUMO (
+    id_consumo INT IDENTITY PRIMARY KEY,
+    id_equipamento INTEGER REFERENCES TB_IASI_EQUIPAMENTO(id_equipamento), --chave estrangeira da tabela equipamento
+    data_consumo DATE,
+    quantidade_consumo FLOAT,
+    tipo_energia_consumo VARCHAR(100),
+    emissao_gas_consumo FLOAT
+);
+
+
+CREATE TABLE TB_IASI_EMPRESA (
+    id_empresa INT IDENTITY PRIMARY KEY,
+    nome_empresa VARCHAR(255),
+    setor_industrial_empresa VARCHAR(100), -- Setor industrial em que a empresa atua
+    localizacao_empresa VARCHAR(255),
+    tipo_empresa VARCHAR(100),
+    conformidade_regulamentar CHAR(1) DEFAULT 'N'
+);
+
+
+CREATE TABLE TB_IASI_CONTATO (
+    id_contato INT IDENTITY PRIMARY KEY,
+    id_empresa INTEGER REFERENCES TB_IASI_EMPRESA(id_empresa),
+    nome_contato VARCHAR(255),
+    cargo_contato VARCHAR(100),  -- Cargo ou função do contato na empresa
+    email_contato VARCHAR(255),
+    telefone_contato VARCHAR(20)
+);
+
+
+CREATE TABLE TB_IASI_MANUTENCAO (
+    id_manutencao INT IDENTITY PRIMARY KEY,
+    id_equipamento INTEGER REFERENCES TB_IASI_EQUIPAMENTO(id_equipamento),
+    tipo_manutencao VARCHAR(100),
+    data_manutencao DATE, -- Data em que a manutenção foi realizada
+    descricao_manutencao VARCHAR(255)
+);
+
+
+CREATE TABLE TB_IASI_RESIDUOS (
+    id_residuo INT IDENTITY PRIMARY KEY,
+    id_equipamento INTEGER REFERENCES TB_IASI_EQUIPAMENTO(id_equipamento),
+    tipo_residuo VARCHAR(100),
+    quantidade_residuo FLOAT,  -- Quantidade de resíduo gerado (em unidade apropriada)
+    data_geracao_residuo DATE,
+    destino_final_residuo VARCHAR(255)
+);
+
